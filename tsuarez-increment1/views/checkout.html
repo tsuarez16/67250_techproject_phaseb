@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./static/style.css">
     <title>MonoMuse</title>
 </head>
-
+ 
 <body>
     <header>
-        <h1> Buy Tickets </h1>
+        <h1> Checkout </h1>
         <nav> 
             <a href="../index.html">Home</a>
             <a href="explore.html">Explore</a>
@@ -20,27 +20,19 @@
             <a href="checkout.html">Checkout</a>
         </nav>
     </header>
-
-    <table>
-        <tr>
-            <th>Ticket Type</th>
-            <th>Description</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>General</td>
-            <td>Full access to all permanent and rotating exhibitions </td>
-            <td>$20.00</td>
-        </tr>
-        <tr>
-            <td>Student</td>
-            <td>Discounted admission for students with valid ID </td>
-            <td>$12.00</td>
-        </tr>
-
-        <tr>
-            <td>Member</td>
-            <td>Free unlimited visits for registered museum members </td>
-            <td>$0.00</td>
-        </tr>
-    </table>
+ 
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+ 
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+ 
+        <label for="quantity">Ticket Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+ 
+        <button type="submit">Submit</button>
+    </form>
+ 
+</body>
+ 
