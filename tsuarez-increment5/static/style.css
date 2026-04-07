@@ -9,7 +9,6 @@
   line-height: 1.5;
 }
 
-/* ── CSS Grid Layout ── */
 .container {
   display: grid;
   grid-template-areas:
@@ -42,13 +41,15 @@
   grid-area: footer;
 }
 
-/* ── Logo ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Archivo, Helvetica, Arial, sans-serif;
+}
+
 #logo {
   width: 18%;
   display: block;
 }
 
-/* ── Nav links ── */
 nav a {
   text-decoration: none;
   color: #f5f5f7;
@@ -73,7 +74,6 @@ nav a:hover {
   border-radius: 999px;
 }
 
-/* ── Hamburger icon (hidden on desktop) ── */
 .hamburger {
   display: none;
   background: transparent;
@@ -85,7 +85,6 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* ── Tables ── */
 th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -109,7 +108,6 @@ tr:nth-child(even) {
   background-color: #1a1a1c;
 }
 
-/* ── Footer ── */
 footer {
   border-top: 1px solid rgba(245,245,247,.12);
   padding: 18px 16px;
@@ -117,13 +115,11 @@ footer {
   color: rgba(245,245,247,.72);
 }
 
-/* ── Form ── */
 form * {
   margin: auto;
   text-align: center;
 }
 
-/* ── Read More / Read Less ── */
 #longIntro {
   display: none;
 }
@@ -144,7 +140,6 @@ form * {
   margin-right: 0;
 }
 
-/* ── Buy Tickets page ── */
 .purchase-form {
   display: none;
   margin-top: 20px;
@@ -186,7 +181,6 @@ form * {
   color: #0b0b0c;
 }
 
-/* ── YouTube iframe ── */
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -202,7 +196,6 @@ form * {
   border-radius: 8px;
 }
 
-/* ── Leaflet map ── */
 #map {
   height: 400px;
   width: 100%;
@@ -212,12 +205,69 @@ form * {
   border: 1px solid #4d5c3b;
 }
 
-/* ─────────────────────────────────────────
-   MOBILE LAYOUT  (max-width: 650px)
-───────────────────────────────────────── */
+.gallery {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 720px;
+  margin: 16px 0;
+}
+
+.gallery-slide {
+  flex: 1;
+}
+
+.gallery-slide img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #4d5c3b;
+  display: block;
+}
+
+.gallery-slide p {
+  text-align: center;
+  font-size: 0.9em;
+  color: rgba(245,245,247,.72);
+  margin-top: 8px;
+}
+
+.gallery-btn {
+  background: transparent;
+  border: 1px solid #4d5c3b;
+  color: #92ad70;
+  font-size: 2em;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.gallery-btn:hover {
+  background-color: #4d5c3b;
+  color: #f5f5f7;
+}
+
+.form-error {
+  color: #e07070;
+  font-size: 0.85em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.confirmation-box {
+  border: 1px solid #4d5c3b;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 400px;
+  margin: 16px 0;
+}
+
+.confirmation-box p {
+  margin: 6px 0;
+}
+
 @media only screen and (max-width: 650px) {
 
-  /* Stack grid to a single column */
   .container {
     grid-template-areas:
       'header'
@@ -227,55 +277,46 @@ form * {
     grid-template-columns: 1fr;
   }
 
-  /* Logo fills more width on mobile */
   #logo {
     width: 50%;
   }
 
-  /* Flex nav becomes vertical, hidden by default */
   .nav_bar {
     flex-direction: column;
     align-items: flex-start;
     padding: 4px 8px;
   }
 
-  /* Hide all nav links on mobile; show hamburger */
   nav a {
     display: none;
     width: 100%;
     padding: 10px 8px;
   }
 
-  /* When responsive class is toggled, show links */
   nav a.responsive {
     display: block;
   }
 
-  /* Show hamburger button */
   .hamburger {
     display: block;
     align-self: flex-end;
     margin-bottom: 4px;
   }
 
-  /* Tables scroll horizontally if too wide */
   table {
     display: block;
     overflow-x: auto;
   }
 
-  /* Video fills full width on mobile */
   .video-wrapper {
     max-width: 100%;
   }
 
-  /* Map fills full width */
   #map {
     max-width: 100%;
     height: 280px;
   }
 
-  /* Purchase form fills full width */
   .purchase-form {
     max-width: 100%;
   }
