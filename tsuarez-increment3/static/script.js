@@ -30,6 +30,28 @@ if (C.length > z) {
 var L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
 var L2 = ["Apple", "Banana", "Kiwi", "Orange"];
 
+function findTheBanana(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === "Banana") {
+            alert("Banana found!");
+        }
+    }
+}
+
+findTheBanana(L1);
+findTheBanana(L2);
+
+// forEach version (confirmed working):
+// function findTheBanana(arr) {
+//     arr.forEach(function(item) {
+//         if (item === "Banana") {
+//             alert("Banana found!");
+//         }
+//     });
+// }
+// findTheBanana(L1);
+// findTheBanana(L2);
+
 var now = new Date();
 var hour = now.getHours();
 

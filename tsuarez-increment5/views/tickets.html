@@ -1,0 +1,60 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <meta name="author" content="Tate Suarez">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse – Tickets</title>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar">
+        <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="buy-tickets" href="buytickets.html">Buy Tickets</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+
+    <main class="main">
+        <h2>Ticket Prices</h2>
+        <table>
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>General</td>
+                <td>Full access to all permanent and rotating exhibitions</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>Discounted admission for students with valid ID</td>
+                <td>$12.00</td>
+            </tr>
+            <tr>
+                <td>Member</td>
+                <td>Free unlimited visits for registered museum members</td>
+                <td>$0.00</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>

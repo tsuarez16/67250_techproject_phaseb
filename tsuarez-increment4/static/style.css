@@ -1,0 +1,169 @@
+* {
+  padding: 5px;
+  margin: 5px;
+  background: #0b0b0c;
+  color: #f5f5f7;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+/* ── CSS Grid Layout ── */
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'nav_bar nav_bar'
+    'main main'
+    'footer footer';
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav_bar {
+  grid-area: nav_bar;
+  display: flex;
+  justify-content: right;
+  padding: 4px 12px;
+}
+
+.main {
+  grid-area: main;
+  padding: 16px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* ── Logo ── */
+#logo {
+  width: 18%;
+  display: block;
+}
+
+/* ── Nav links ── */
+nav a {
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  border-color: #4d5c3b;
+}
+
+.active {
+  color: #92ad70;
+}
+
+#buy-tickets {
+  background-color: #4d5c3b;
+  padding: 8px 18px;
+  font-weight: bold;
+  border-radius: 999px;
+}
+
+/* ── Tables ── */
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4d5c3b;
+  color: #f5f5f7;
+  width: fit-content;
+}
+
+table {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #1a1a1c;
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid rgba(245,245,247,.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(245,245,247,.72);
+}
+
+/* ── Form ── */
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+/* ── Read More / Read Less ── */
+#longIntro {
+  display: none;
+}
+
+#readLess {
+  display: none;
+}
+
+#readMore, #readLess {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4d5c3b;
+  color: #92ad70;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  margin-top: 8px;
+  margin-right: 0;
+}
+
+/* ── Buy Tickets page ── */
+.purchase-form {
+  display: none;
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #4d5c3b;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.purchase-form label {
+  display: block;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.purchase-form input, .purchase-form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 6px 8px;
+  border: 1px solid #4d5c3b;
+  border-radius: 6px;
+  background: #1a1a1c;
+  color: #f5f5f7;
+}
+
+.btn {
+  background-color: #4d5c3b;
+  color: #f5f5f7;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #92ad70;
+  color: #0b0b0c;
+}

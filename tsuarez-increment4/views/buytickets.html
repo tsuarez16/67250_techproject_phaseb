@@ -1,0 +1,129 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <meta name="author" content="Tate Suarez">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse – Buy Tickets</title>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="buy-tickets" href="buytickets.html">Buy Tickets</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+
+    <main class="main">
+        <h2>Ticket Prices</h2>
+        <table>
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>General</td>
+                <td>Full access to all permanent and rotating exhibitions</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>Discounted admission for students with valid ID</td>
+                <td>$12.00</td>
+            </tr>
+            <tr>
+                <td>Member</td>
+                <td>Free unlimited visits for registered museum members</td>
+                <td>$0.00</td>
+            </tr>
+        </table>
+
+        <h2>April 2026 Schedule</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>April 10</td>
+                <td>General Admission</td>
+                <td>10:00 AM – 5:00 PM</td>
+                <td><button class="btn" onclick="showForm('April 10')">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>April 12</td>
+                <td>Guided Tour: Exhibition 1</td>
+                <td>11:00 AM – 1:00 PM</td>
+                <td><button class="btn" onclick="showForm('April 12')">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>April 17</td>
+                <td>General Admission</td>
+                <td>10:00 AM – 5:00 PM</td>
+                <td><button class="btn" onclick="showForm('April 17')">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>April 19</td>
+                <td>Artist Talk: Digital Futures</td>
+                <td>2:00 PM – 4:00 PM</td>
+                <td><button class="btn" onclick="showForm('April 19')">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>April 24</td>
+                <td>General Admission</td>
+                <td>10:00 AM – 5:00 PM</td>
+                <td><button class="btn" onclick="showForm('April 24')">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>April 26</td>
+                <td>Family Day: Interactive Exhibits</td>
+                <td>10:00 AM – 3:00 PM</td>
+                <td><button class="btn" onclick="showForm('April 26')">Buy Now</button></td>
+            </tr>
+        </table>
+
+        <div id="purchaseForm" class="purchase-form">
+            <h3>Purchase Tickets</h3>
+            <label for="buyName">Name:</label>
+            <input type="text" id="buyName" name="buyName" required>
+
+            <label for="buyEmail">Email:</label>
+            <input type="email" id="buyEmail" name="buyEmail" required>
+
+            <label for="ticketType">Ticket Type:</label>
+            <select id="ticketType" name="ticketType">
+                <option value="general">General – $20.00</option>
+                <option value="student">Student – $12.00</option>
+                <option value="member">Member – $0.00</option>
+            </select>
+
+            <label for="ticketQty">Number of Tickets:</label>
+            <input type="number" id="ticketQty" name="ticketQty" min="1" value="1" required>
+
+            <label for="selectedDate">Selected Date:</label>
+            <input type="text" id="selectedDate" name="selectedDate" readonly>
+
+            <br>
+            <button class="btn" onclick="alert('Redirecting to payment system.')">Submit</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>

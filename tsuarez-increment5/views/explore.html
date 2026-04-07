@@ -1,0 +1,56 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <meta name="author" content="Tate Suarez">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse – Explore</title>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar">
+        <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="buy-tickets" href="buytickets.html">Buy Tickets</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+
+    <main class="main">
+        <img src="../static/indoor-exhinits.jpg" alt="museum pic">
+
+        <h2>Mission Statement</h2>
+        <p>MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity. Through immersive exhibitions, interactive installations, and rotating collections, MonoMuse invites visitors to discover how digital innovation is transforming the way we create, experience, and understand art. Whether you are a first-time visitor or a returning member, our exhibitions offer new perspectives on the role of technology in culture and everyday life. Plan your visit to experience cutting-edge exhibitions, hands-on experiences, and events designed to inspire curiosity and creativity.</p>
+
+        <h2>Milestones</h2>
+        <ul>
+            <li>2025: Increased investments toward accessibility efforts</li>
+            <li>2023: Expansion of the Museum space</li>
+            <li>2020: Offered free art programs during the Covid-19 pandemic</li>
+        </ul>
+
+        <h2>Visit Us</h2>
+        <p>Find MonoMuse at 4400 Forbes Ave, Pittsburgh, PA. We are open Tuesday–Sunday, 10 AM to 5 PM.</p>
+        <div id="map"></div>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
