@@ -1,4 +1,5 @@
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +11,7 @@
     <script src="../static/script.js" defer></script>
     <title>MonoMuse – Checkout</title>
 </head>
-<body onload="addYear()">
+<body onload="initCheckout(); addYear()">
 <div class="container">
 
     <header class="header">
@@ -28,8 +29,47 @@
 
     <main class="main">
         <h2>Checkout</h2>
-        <p>Ready to purchase tickets? Head to our Buy Tickets page to select a date, choose your ticket type, and complete your order.</p>
-        <a href="buytickets.html" class="btn" style="display:inline-block; margin-top:16px; text-decoration:none;">Buy Tickets</a>
+        <p>Complete your order below. Select your ticket type and quantity, then place your order.</p>
+
+        <div class="purchase-form">
+            <h3>Purchase Tickets</h3>
+
+            <div id="selectedEventInfo" class="selected-event-info" style="display:none;"></div>
+
+            <label for="buyName">Name:</label>
+            <input type="text" id="buyName" name="buyName" placeholder="Jane Smith" required>
+            <span class="form-error" id="nameError"></span>
+
+            <label for="buyEmail">Email:</label>
+            <input type="email" id="buyEmail" name="buyEmail" placeholder="jane@example.com" required>
+            <span class="form-error" id="emailError"></span>
+
+            <label for="ticketType">Ticket Type:</label>
+            <select id="ticketType" name="ticketType" onchange="updatePrice()">
+                <option value="18">General – $18.00</option>
+                <option value="18">Student – $18.00</option>
+                <option value="18">Member – $18.00</option>
+            </select>
+
+            <label for="ticketQty">Number of Tickets:</label>
+            <input type="number" id="ticketQty" name="ticketQty" min="1" max="10" value="1" required oninput="updatePrice()">
+            <span class="form-error" id="qtyError"></span>
+
+            <input type="hidden" id="selectedDate" name="selectedDate">
+            <span class="form-error" id="dateError"></span>
+
+            <label for="buyZip">Zip Code:</label>
+            <input type="text" id="buyZip" name="buyZip" maxlength="5" placeholder="12345">
+            <span class="form-error" id="zipError"></span>
+
+            <label style="display:flex; align-items:center; gap:8px; text-align:left; margin-bottom:14px;">
+                <input type="checkbox" id="mailingList" name="mailingList" style="width:auto; margin:0;"> Join our mailing list
+            </label>
+
+            <p id="orderTotal" style="font-family:'Archivo',sans-serif; font-weight:700; font-size:1.1em; margin-top:4px; margin-bottom:16px;">Total: $18.00</p>
+
+            <button class="btn" onclick="submitOrder()">Place Order</button>
+        </div>
     </main>
 
     <footer class="footer">

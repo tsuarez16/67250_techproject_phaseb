@@ -1,4 +1,5 @@
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,45 +98,6 @@
             </tr>
         </table>
 
-        <div id="purchaseForm" class="purchase-form">
-            <h3>Purchase Tickets</h3>
-
-            <label for="buyName">Name:</label>
-            <input type="text" id="buyName" name="buyName" required>
-            <span class="form-error" id="nameError"></span>
-
-            <label for="buyEmail">Email:</label>
-            <input type="email" id="buyEmail" name="buyEmail" required>
-            <span class="form-error" id="emailError"></span>
-
-            <label for="ticketType">Ticket Type:</label>
-            <select id="ticketType" name="ticketType" onchange="updatePrice()">
-                <option value="18">General – $18.00</option>
-                <option value="18">Student – $18.00</option>
-                <option value="18">Member – $18.00</option>
-            </select>
-
-            <label for="ticketQty">Number of Tickets:</label>
-            <input type="number" id="ticketQty" name="ticketQty" min="1" max="10" value="1" required oninput="updatePrice()">
-            <span class="form-error" id="qtyError"></span>
-
-            <label for="selectedDate">Visit Date:</label>
-            <input type="date" id="selectedDate" name="selectedDate" required>
-            <span class="form-error" id="dateError"></span>
-
-            <label for="buyZip">Zip Code:</label>
-            <input type="text" id="buyZip" name="buyZip" maxlength="5" placeholder="12345">
-            <span class="form-error" id="zipError"></span>
-
-            <label>
-                <input type="checkbox" id="mailingList" name="mailingList"> Join our mailing list
-            </label>
-
-            <p id="orderTotal" style="font-weight:bold; margin-top: 12px;">Total: $0.00</p>
-
-            <br>
-            <button class="btn" onclick="submitOrder()">Place Order</button>
-        </div>
     </main>
 
     <footer class="footer">

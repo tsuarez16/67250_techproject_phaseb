@@ -86,16 +86,23 @@ if (typeof jQuery !== "undefined") {
     });
 }
 
-// shows the purchase form and fills in the date that was clicked
+// sends the user to the checkout page with the chosen event date in the URL
 function showForm(dateStr) {
-    var form = document.getElementById("purchaseForm");
-    var selectedDate = document.getElementById("selectedDate");
-    if (form) {
-        form.style.display = "block";
-        if (selectedDate && dateStr) {
-            selectedDate.value = dateStr;
-        }
-        form.scrollIntoView({ behavior: "smooth" });
+    window.location.href = "checkout.html?date=" + encodeURIComponent(dateStr);
+}
+
+// reads the event date from the URL and shows it on the checkout page
+function initCheckout() {
+    var params = new URLSearchParams(window.location.search);
+    var date = params.get("date");
+    var infoEl = document.getElementById("selectedEventInfo");
+    var hiddenDate = document.getElementById("selectedDate");
+    if (infoEl && date) {
+        infoEl.innerHTML = "<strong>Selected Event:</strong> " + date;
+        infoEl.style.display = "block";
+    }
+    if (hiddenDate && date) {
+        hiddenDate.value = date;
     }
     updatePrice();
 }
@@ -143,7 +150,7 @@ function submitOrder() {
         valid = false;
     }
     if (!date.value) {
-        document.getElementById("dateError").innerHTML = "Please select a visit date.";
+        document.getElementById("dateError").innerHTML = "No event date found. Please go back to Buy Tickets and select an event.";
         valid = false;
     }
     if (zip.value && !/^\d{5}$/.test(zip.value)) {

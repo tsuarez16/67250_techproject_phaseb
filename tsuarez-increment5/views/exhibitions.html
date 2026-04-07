@@ -1,4 +1,5 @@
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +29,16 @@
 
     <main class="main">
         <!-- AI was used to refine the exhibition text below -->
-        <h3>Exhibition 1</h3>
-        <p>This exhibition draws together over 200 artifacts recovered from sunken postal vessels dating between 1840 and 1940, tracing the intimate correspondences that never reached their destinations. Visitors move through a series of dimly lit alcoves, each representing a different sea route, where waterlogged letters, logbooks, and personal effects are suspended in conservation glass like frozen moments of longing. The collection invites a meditation on distance, loss, and the strange persistence of human voices across depths that were never meant to preserve them.</p>
-
-        <h3>Exhibition 2</h3>
-        <p>This exhibition catalogs sounds that were documented once and never heard again: the creak of a demolished bridge, the ambient hum of a factory floor on its last operating day, the particular silence of a village evacuated before a flood. Each sound is represented not through playback but through hand-drawn waveform illustrations, field notes, and small sculptural objects meant to approximate the sensation of hearing. It is less a celebration of sound than a museum of its absence, and visitors frequently report leaving in an unusual, unnameable quiet.</p>
+        <div class="exhibition-row">
+            <div class="exhibition-card">
+                <h3>Exhibition 1</h3>
+                <p>This exhibition draws together over 200 artifacts recovered from sunken postal vessels dating between 1840 and 1940, tracing the intimate correspondences that never reached their destinations. Visitors move through a series of dimly lit alcoves, each representing a different sea route, where waterlogged letters, logbooks, and personal effects are suspended in conservation glass like frozen moments of longing. The collection invites a meditation on distance, loss, and the strange persistence of human voices across depths that were never meant to preserve them.</p>
+            </div>
+            <div class="exhibition-card">
+                <h3>Exhibition 2</h3>
+                <p>This exhibition catalogs sounds that were documented once and never heard again: the creak of a demolished bridge, the ambient hum of a factory floor on its last operating day, the particular silence of a village evacuated before a flood. Each sound is represented not through playback but through hand-drawn waveform illustrations, field notes, and small sculptural objects meant to approximate the sensation of hearing. It is less a celebration of sound than a museum of its absence, and visitors frequently report leaving in an unusual, unnameable quiet.</p>
+            </div>
+        </div>
 
         <h3>Gallery</h3>
         <div class="gallery">
@@ -46,16 +52,10 @@
 
         <h3>Featured Video</h3>
         <p>Take a virtual tour of contemporary museum exhibitions from around the world.</p>
-        <div class="video-wrapper">
-            <iframe
-                src="https://www.youtube.com/embed/clPSdvY5GzE?si=G8EoHaE0ufraiTGt"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </div>
+        <a href="https://www.youtube.com/watch?v=clPSdvY5GzE" target="_blank" class="video-thumb-wrap" aria-label="Watch virtual museum tour on YouTube">
+            <img src="https://img.youtube.com/vi/clPSdvY5GzE/maxresdefault.jpg" alt="Virtual museum tour video thumbnail">
+            <div class="video-play-btn">&#9654;</div>
+        </a>
     </main>
 
     <footer class="footer">
