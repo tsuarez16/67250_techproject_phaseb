@@ -1,0 +1,66 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="author" content="Tate Suarez">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse – Exhibitions</title>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar">
+        <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="buy-tickets" href="buytickets.html">Buy Tickets</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+
+    <main class="main">
+        <!-- AI was used to refine the exhibition text below -->
+        <div class="exhibition-row">
+            <div class="exhibition-card">
+                <h3>Exhibition 1</h3>
+                <p>This exhibition draws together over 200 artifacts recovered from sunken postal vessels dating between 1840 and 1940, tracing the intimate correspondences that never reached their destinations. Visitors move through a series of dimly lit alcoves, each representing a different sea route, where waterlogged letters, logbooks, and personal effects are suspended in conservation glass like frozen moments of longing. The collection invites a meditation on distance, loss, and the strange persistence of human voices across depths that were never meant to preserve them.</p>
+            </div>
+            <div class="exhibition-card">
+                <h3>Exhibition 2</h3>
+                <p>This exhibition catalogs sounds that were documented once and never heard again: the creak of a demolished bridge, the ambient hum of a factory floor on its last operating day, the particular silence of a village evacuated before a flood. Each sound is represented not through playback but through hand-drawn waveform illustrations, field notes, and small sculptural objects meant to approximate the sensation of hearing. It is less a celebration of sound than a museum of its absence, and visitors frequently report leaving in an unusual, unnameable quiet.</p>
+            </div>
+        </div>
+
+        <h3>Gallery</h3>
+        <div class="gallery">
+            <button class="gallery-btn" onclick="changeSlide(-1)">&#8249;</button>
+            <div class="gallery-slide">
+                <img id="galleryImg" src="../static/artifacts.jpg" alt="Glass display case containing ancient village artifacts including ceramics, stone tools, and bone implements arranged on teal felt">
+                <p id="galleryCaption">Ancient Artifact Display – Ceramics, stone tools, and bone implements recovered from village excavations. &copy; KSL TV</p>
+            </div>
+            <button class="gallery-btn" onclick="changeSlide(1)">&#8250;</button>
+        </div>
+
+        <h3>Featured Video</h3>
+        <p>Take a virtual tour of contemporary museum exhibitions from around the world.</p>
+        <a href="https://www.youtube.com/watch?v=clPSdvY5GzE" target="_blank" class="video-thumb-wrap" aria-label="Watch virtual museum tour on YouTube">
+            <img src="https://img.youtube.com/vi/clPSdvY5GzE/maxresdefault.jpg" alt="Virtual museum tour video thumbnail">
+            <div class="video-play-btn">&#9654;</div>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>

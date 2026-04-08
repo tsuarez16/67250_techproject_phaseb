@@ -1,0 +1,52 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="author" content="Tate Suarez">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse – Order Confirmation</title>
+</head>
+<body onload="loadConfirmation(); addYear()">
+<div class="container">
+
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar">
+        <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="buy-tickets" href="buytickets.html">Buy Tickets</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+
+    <main class="main">
+        <h2>Order Confirmed!</h2>
+        <p>Thank you for your purchase. Your order details are below.</p>
+
+        <div class="confirmation-box">
+            <p><strong>Name:</strong> <span id="confName"></span></p>
+            <p><strong>Email:</strong> <span id="confEmail"></span></p>
+            <p><strong>Visit Date:</strong> <span id="confDate"></span></p>
+            <p><strong>Ticket Type:</strong> <span id="confType"></span></p>
+            <p><strong>Quantity:</strong> <span id="confQty"></span></p>
+            <p><strong>Total:</strong> <span id="confTotal"></span></p>
+        </div>
+
+        <p>A confirmation email will be sent to your address. We look forward to seeing you at MonoMuse!</p>
+        <a href="../index.html" class="btn" style="display:inline-block; margin-top:16px; text-decoration:none;">Return Home</a>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
